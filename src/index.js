@@ -1,12 +1,16 @@
-// Imports nativos da Biblioteca 
-import React from 'react'
-import ReactDOM from 'react-dom'
+// Imports nativos da Biblioteca
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 
-// Importando o componenet APP
-import App from './App'
+//Imports de arquivos locais do projeto
+import App from './App';
+import './index.css';
 
-//Importando o css
-import './index.css'
-
-// Renderizando o component APP (com seus sub components) em <div id="root"></div> do index.html
-ReactDOM.render( < App / > , document.getElementById('root'))
+// Renderizando o component APP (com seus sub componenets e etc) em <div id="root"></div> do index.html
+// Obs: Colocamos o <BrowserRouter> envolta de <App /> para que as rotas fiquem disponíveis no nosso APP todo
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
